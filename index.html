@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Special</title>
+    <link rel="stylesheet" href="vendor/sweetalert2/dist/sweetalert2.min.css">
+</head>
+<body>
+    
+    <script src="vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script>
+        Swal.fire({
+            title: 'Assalamu alaikum wr, wb.',
+            confirmButtonText: 'Ok'
+        }).then(function(){
+            Swal.fire({
+                title : 'Halo Cantik',
+                confirmButtonText : 'ok',
+            }).then(function(){
+                Swal.fire({
+                    title : 'Bagaimana Kabarnya?',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Baik',
+                    cancelButtonText : 'Ga Baik'
+                }).then((result) => {
+                    if(result.value) {
+                        Swal.fire({
+                            title : 'Alhamdulillah',
+                            confirmButtonText : 'ok',
+                        }).then(function(){
+                            Swal.fire({
+                                title : 'Jangan lupa istirahat',
+                                confirmButtonText : 'ok'
+                            }).then(function(){
+                                Swal.fire({
+                                    title : 'Jangan lupa makan',
+                                    confirmButtonText : 'ok'
+                                }).then(function(){
+                                    Swal.fire({
+                                        title : 'Aku Kangen kamu',
+                                        confirmButtonText : 'ok'
+                                    });
+                                });
+                            });
+                        });
+                    } else {
+                        Swal.fire({
+                            title : 'Ada masalah apa ?',
+                            confirmButtonText : 'Yuk Cerita',
+                        }).then(function(){
+                            window.location = 'https://api.whatsapp.com/send/?phone=6283863447918&text=aku%20mau%20curhat';
+                        });
+                    }
+                 });
+            });
+        });
+   
+        
+    </script>
+</body>
+</html>
